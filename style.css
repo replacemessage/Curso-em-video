@@ -1,0 +1,121 @@
+body{
+    margin: 0;
+}
+body *{
+    box-sizing: border-box;
+}
+.main-login{
+    width: 100vw;  /*Tamanho da view port horizontal*/
+    height: 100vh; /*Tamanho da view port vertical*/
+    background: #201b2c;
+    display: flex; /*Ajusta as duas div lado a lado*/
+    justify-content: center; /*Ajusta no eixo x*/
+    align-items: center;     /*Ajusta no eixo y*/
+}
+
+.left-login{
+    width: 50vw;    /*Tamanho da view port pela metade*/
+    height: 100vh;  /*Tamanho da view port total da tela*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/*Acessando a tag <h1> da <div class="left-login>"*/
+.left-login > h1{
+    color: blue;
+}
+.image-left{
+    width: 35vw;
+}
+.rigth-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px; /*Margin de (cima+baixo) ,(esquerda+direita)*/
+    background: blue;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px white ;
+}
+.card-login > h1{
+    color: #201b2c;
+    font-weight: 800; /*Conhecido como bold*/
+    margin: 0;
+}
+.textfield{/*Todas as escritas dos inputs e label*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+.textfield > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 8px ;
+    background: rgba(128, 128, 128, 0.452);
+    color: #f0ffffd0;
+    font-size: 12pt;
+    box-shadow: 5px 5px 10px white;
+    outline: none;
+    box-sizing: border-box;
+}
+.button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: cente;
+    outline: none;    
+}
+.button > button{
+    
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin: 5px 0px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    cursor: pointer;
+    background: rgba(128, 128, 128, 0.452);
+}
+@media only screen and(max-width: 950px){
+    .main-login{
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 600px){
+    .main-login{
+        flex-direction: column;
+    }
+    .left-login > h1{
+        display:none;
+    }
+    .left-login{
+        width: 100%;
+        height: auto;
+    }
+    .rigth-login{
+        width: 100%;
+        height: auto;
+    }
+    .image-left{
+        width: 50vw;
+    }
+    .card-login{
+        width: 90%;
+    }
+}
