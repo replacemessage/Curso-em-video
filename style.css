@@ -4,6 +4,24 @@ body{
 body *{
     box-sizing: border-box;
 }
+@font-face {
+    font-family:'Jackpot';
+    src: url(fonts/Jackpot.ttf) format('truetype');
+    
+    /*
+        Tipos de Format()
+        - opentype (otf)
+        - truetype (ttf)
+        - embedded-opentype
+        - truetype-att (Apple Advanced Typography)
+        - svg
+        */
+}
+
+@font-face {
+    font-family:'oi';
+    src: url(fonts/handwriting.ttf) format('truetype');
+}
 .main-login{
     width: 100vw;  /*Tamanho da view port horizontal*/
     height: 100vh; /*Tamanho da view port vertical*/
@@ -25,10 +43,21 @@ body *{
 .left-login > h1{
     color: blue;
 }
+.left-login > p{
+    font-weight: normal;
+    font-style: normal;
+    font-family:'Jackpot';
+    color:red;
+    font-size: 32px;
+}
 .image-left{
     width: 35vw;
 }
 .rigth-login{
+    
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
     width: 50vw;
     height: 100vh;
     display: flex;
@@ -45,15 +74,33 @@ body *{
     background: blue;
     border-radius: 20px;
     box-shadow: 5px 5px 10px white ;
+    transition: .5s ease-in-out;
+}
+.card-cadastro{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+        /*Margin de (cima+baixo) ,(esquerda+direita)*/
+    background: blue;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px white;
+    transition: .5s ease-in-out;
 }
 .card-login > h1{
-    color: #8066bd;
-    font-weight: 800; /*Conhecido como bold*/
+/* color: #8066bd;
+    font-weight: 800; Conhecido como bold
+    color:red;*/
     margin: 0;
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Jackpot';
 }
 .textfield{/*Todas as escritas dos inputs e label*/
     display: flex;
-    flex-direction: column;
+   /* flex-direction: column;*/
     align-items: flex-start;
     justify-content: center;
     margin: 10px 0px;
@@ -70,22 +117,23 @@ body *{
     box-shadow: 5px 5px 10px white;
     outline: none;
     box-sizing: border-box;
-}
+} /*
 .textfield > label{
     font-weight: 600;
-    color:#8066bd;
-}
+   color:#8066bd;
+    font-size: 20px;
+}*/
 .button{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: cente;
+    justify-content: center;
     outline: none;    
 }
 .button > button{
-    
     width: 100%;
     box-sizing: border-box;
+    box-shadow: 5px 5px 10px white;
     padding: 8px;
     outline: none;
     border: none;

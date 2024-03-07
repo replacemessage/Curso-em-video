@@ -4,42 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <title>Curso em vídeo</title>
 </head>
 <body>
+    
     <!--Essa div é a global-->
     <div class="main-login">
-        <!--Div lado esquerdo dentro da global-->
-        <div class="left-login">
-            <h1>Faça login ou Cadastre-se<br>
-                E curta o conteudo do<br></h1>
-                <p class="curso">&copy Curso em Vídeo</p>
-            <img src="payment-information-animate.svg" class="image-left">   
-        </div>
-        <!--Div lado direito dentro da global-->
-        <div class="rigth-login">
-         <!--Divi dos input do lado direito-->   
-            <div class="card-login">
-                <h1>Login</h1>
-                <!--Input Usuário-->
-                <div class="textfield">
-                    <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Usuário">
-                </div>
-                <!--Input senha-->
-                <div class="textfield">
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
-                </div>
-                <div class="button">
-                    <button class="btn-login">Login</button>
-                    <button class="btn-cadastro">Cadastro</button>
-                </div>
-                
+
+<!------------------------Div lado esquerdo dentro da global--------------->
+        <div class="left-login">           
+            <p>&copy Curso em Video.com</p>
+            <img src="payment-information-animate.svg" class="image-left"> 
+            <div class="nav-button">
+                <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+                <button class="btn" id="registerBtn" onclick="register()"> Sign Up</button>
             </div>
         </div>
+
+<!------------------------Divi dos input do lado direito------------------->
+        <div class="rigth-login">
+         <!-- Dentro da <div class="rigth-login"> irar conter
+              duas div's uma para fazer o login e a segunda 
+              para fazer o cadastro sem a necessidade de criar uma
+              nova pagina html-->   
+            <div class="card-login">
+                <h1>Login</h1>
+            <!-------Input Usuário-->
+                <div class="textfield">
+                    <!--Acessando o site do Boxicons para verificar as configurações
+                        das animações estilos formas dos icones-->
+                    <i class='bx bxs-user-account bx-flashing bx-sm'></i>
+                    <input type="text" name="usuario" placeholder="Usuário">
+                </div>
+            <!-------Input senha-->
+                <div class="textfield">
+                    <!--<label for="senha">Senha</label>-->
+                    <i class="bx bxs-lock-open bx-sm bx-flashing" ></i>
+                    <input type="password" name="senha" placeholder="Senha">
+                </div>
+           
+                
+            </div>
+        <!-- Essa é a segunda div's para efetuar o cadastro-->    
+            <div class="card-cadastro">
+                <div class="textfield">
+                    <i class="bx bxs-lock-open bx-sm bx-flashing"></i>
+                    <input type="text" name="newuser" placeholder="Digite seu nome">
+                </div>
+                <div class="textfield">
+                    <i class="bx bxs-lock-open bx-sm bx-flashing"></i>
+                    <input type="text" name="e-mail" placeholder="Digite o E-Mail">
+                </div>
+                <div class="textfield">
+                    <i class="bx bxs-lock-open bx-sm bx-flashing"></i>
+                    <input type="password" name="novasenha" placeholder="Crie uma senha">
+                </div>
+            </div>
+<!-------Botões ------>
+<div class="button">
+    <button class="btn-login">Login</button>
+    <button class="btn-cadastro">Cadastro</button>
+</div>
+
+        </div>
     </div>
-    
+<script src="funcoes.js"></script>
 </body>
 </html>
