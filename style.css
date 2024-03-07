@@ -47,7 +47,7 @@ body *{
     box-shadow: 5px 5px 10px white ;
 }
 .card-login > h1{
-    color: #201b2c;
+    color: #8066bd;
     font-weight: 800; /*Conhecido como bold*/
     margin: 0;
 }
@@ -66,9 +66,14 @@ body *{
     background: rgba(128, 128, 128, 0.452);
     color: #f0ffffd0;
     font-size: 12pt;
+    font-weight: 600;
     box-shadow: 5px 5px 10px white;
     outline: none;
     box-sizing: border-box;
+}
+.textfield > label{
+    font-weight: 600;
+    color:#8066bd;
 }
 .button{
     display: flex;
@@ -92,6 +97,7 @@ body *{
     cursor: pointer;
     background: rgba(128, 128, 128, 0.452);
 }
+/*Trabalho em modo responsivo para varios dispositivos*/
 @media only screen and(max-width: 950px){
     .main-login{
         flex-direction: column;
