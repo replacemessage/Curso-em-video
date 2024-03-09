@@ -1,0 +1,17 @@
+.menu{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 200px;
+    background: darkgoldenrod;
+    border: 2px black;
+}
+.menu:hover{
+ color: crimson;
+}
+.menu:hover >p {
+    display: block;
+}
+.menu > p{
+    display:none
+}

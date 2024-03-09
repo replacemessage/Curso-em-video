@@ -1,14 +1,24 @@
-body{
-    margin: 0;
-}
-body *{
-    box-sizing: border-box;
-}
-@font-face {
-    font-family:'Jackpot';
-    src: url(fonts/Jackpot.ttf) format('truetype');
-    
-    /*
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300&display=swap');
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+      margin: 0;
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+  }
+
+  @font-face {
+      font-family: 'Jackpot';
+      src: url(fonts/Jackpot.ttf) format('truetype');
+
+      /*
         Tipos de Format()
         - opentype (otf)
         - truetype (ttf)
@@ -16,160 +26,247 @@ body *{
         - truetype-att (Apple Advanced Typography)
         - svg
         */
-}
+  }
 
-@font-face {
-    font-family:'oi';
-    src: url(fonts/handwriting.ttf) format('truetype');
-}
-.main-login{
-    width: 100vw;  /*Tamanho da view port horizontal*/
-    height: 100vh; /*Tamanho da view port vertical*/
-    background: #201b2c;
-    display: flex; /*Ajusta as duas div lado a lado*/
-    justify-content: center; /*Ajusta no eixo x*/
-    align-items: center;     /*Ajusta no eixo y*/
-}
+  @font-face {
+      font-family: 'oi';
+      src: url(fonts/handwriting.ttf) format('truetype');
+  }
 
-.left-login{
-    width: 50vw;    /*Tamanho da view port pela metade*/
-    height: 100vh;  /*Tamanho da view port total da tela*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-/*Acessando a tag <h1> da <div class="left-login>"*/
-.left-login > h1{
-    color: blue;
-}
-.left-login > p{
-    font-weight: normal;
-    font-style: normal;
-    font-family:'Jackpot';
-    color:red;
-    font-size: 32px;
-}
-.image-left{
-    width: 35vw;
-}
-.rigth-login{
-    
-    position: relative;
-    overflow: hidden;
-    z-index: 2;
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.card-login{
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 30px 35px; /*Margin de (cima+baixo) ,(esquerda+direita)*/
-    background: blue;
-    border-radius: 20px;
-    box-shadow: 5px 5px 10px white ;
-    transition: .5s ease-in-out;
-}
-.card-cadastro{
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 30px 35px;
-        /*Margin de (cima+baixo) ,(esquerda+direita)*/
-    background: blue;
-    border-radius: 20px;
-    box-shadow: 5px 5px 10px white;
-    transition: .5s ease-in-out;
-}
-.card-login > h1{
-/* color: #8066bd;
-    font-weight: 800; Conhecido como bold
-    color:red;*/
-    margin: 0;
-    font-weight: normal;
-    font-style: normal;
-    font-family: 'Jackpot';
-}
-.textfield{/*Todas as escritas dos inputs e label*/
-    display: flex;
-   /* flex-direction: column;*/
-    align-items: flex-start;
-    justify-content: center;
-    margin: 10px 0px;
-}
-.textfield > input{
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    padding: 8px ;
-    background: rgba(128, 128, 128, 0.452);
-    color: #f0ffffd0;
-    font-size: 12pt;
-    font-weight: 600;
-    box-shadow: 5px 5px 10px white;
-    outline: none;
-    box-sizing: border-box;
-} /*
-.textfield > label{
-    font-weight: 600;
-   color:#8066bd;
-    font-size: 20px;
-}*/
-.button{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    outline: none;    
-}
-.button > button{
-    width: 100%;
-    box-sizing: border-box;
-    box-shadow: 5px 5px 10px white;
-    padding: 8px;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    margin: 5px 0px;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 3px;
-    cursor: pointer;
-    background: rgba(128, 128, 128, 0.452);
-}
-/*Trabalho em modo responsivo para varios dispositivos*/
-@media only screen and(max-width: 950px){
-    .main-login{
-        flex-direction: column;
-    }
-}
-@media only screen and (max-width: 600px){
-    .main-login{
-        flex-direction: column;
-    }
-    .left-login > h1{
-        display:none;
-    }
-    .left-login{
-        width: 100%;
-        height: auto;
-    }
-    .rigth-login{
-        width: 100%;
-        height: auto;
-    }
-    .image-left{
-        width: 50vw;
-    }
-    .card-login{
-        width: 90%;
-    }
-}
+  .main-login {
+      position: relative;
+      overflow: hidden;
+      width: 100vw;
+      /*Tamanho da view port horizontal*/
+      height: 100vh;
+      /*Tamanho da view port vertical*/
+      background: #201b2c;
+      display: flex;
+      /*Ajusta as duas div lado a lado*/
+      justify-content: center;
+      /*Ajusta no eixo x*/
+      align-items: center;
+      /*Ajusta no eixo y*/
+      z-index: 2;
+  }
+
+  .nav {
+      position: fixed;
+      top: 0;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      height: 100px;
+      line-height: 100px;
+      background: linear-gradient(rgba(39, 39, 39, 0.6), transparent);
+      z-index: 100;
+
+  }
+
+  .nav-button .btn {
+      width: 130px;
+      height: 40px;
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.4);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: .3s ease;
+  }
+
+  .btn:hover {
+      background: rgba(255, 255, 255, 0.3)
+  }
+
+  #registerbtn {
+      margin-left: 15px;
+  }
+
+  .btn.white-btn {
+      background: rgba(255, 255, 255, 0.7);
+  }
+
+  .btn.btn.white-btn:hover {
+      background: rgba(255, 255, 255, 0.5);
+  }
+
+  .left-login {
+      width: 50vw;
+      /*Tamanho da view port pela metade*/
+      height: 100vh;
+      /*Tamanho da view port total da tela*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+
+  /*Acessando a tag <h1> da <div class="left-login>"*/
+  .left-login>h1 {
+      color: blue;
+  }
+
+  .left-login>p {
+      font-weight: normal;
+      font-style: normal;
+      font-family: 'Jackpot';
+      color: red;
+      font-size: 32px;
+  }
+
+  .image-left {
+      width: 35vw;
+  }
+
+  .top span,
+  .down span {
+      color: white;
+      font-size: small;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+  }
+
+  .top span a,
+  .down span a {
+      font-weight: 500;
+      color: red;
+      margin-left: 5px;
+  }
+
+  .rigth-login {
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 520px;
+      height: 520px;
+      flex-direction: column;
+      transition: .5s ease-in-out;
+  }
+
+  .card-login {
+      position: absolute;
+      left: 40px;     /*Esquerda*/
+      right: -500px; /*Direita*/
+      width: 450px;  /*Largura*/
+      height: 450px; /*Altura*/
+      display: flex;
+      flex-direction: column;
+      transition: .8s ease-in-out;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 5px 5px 10px white;
+  }
+
+  .card-cadastro {
+      position: absolute;     
+      right: -520px; /*Direita*/ 
+      width: 450px;  /*Largura*/
+      height: 450px; /*Altura*/
+      display: flex;
+      flex-direction: column;
+      transition: .8s ease-in-out;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 5px 5px 10px white;
+  }
+
+  .card-login h1,
+  .card-cadastro h1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      color: red;
+      font-weight: normal;
+      font-style: normal;
+      font-family: 'Jackpot';
+  }
+
+  .input-field {
+      font-size: 15px;
+      background: rgba(255, 255, 255, 0.2);
+      color: #ffff;
+      height: 40px;
+      width: 100%;
+      padding: 0 10px 0 45px;
+      border: none;
+      border-radius: 30px;
+      outline: none;
+      transition: .2s ease;
+  }
+  .input-field:hover,
+  .input-field:focus {
+      background: rgba(255, 255, 255, 0.5);
+  }
+
+  ::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.5);
+  }
+
+  .input-box i {
+      position: relative;
+      top: -33px;
+      left: 17px;
+      color: #fff;
+  }
+
+  .submit {
+      font-size: 15px;
+      font-weight: 600;
+      justify-content: center;
+      justify-items: center;
+      color: black;
+      text-align: center;
+      height: 40px;
+      width: 100%;
+      border: none;
+      border-radius: 30px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      transition: .3s ease-in-out;
+  }
+
+  .submit:hover {
+      background: rgba(255, 255, 255, 0.5);
+      box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  /*Trabalho em modo responsivo para varios dispositivos*/
+  @media only screen and(max-width: 950px) {
+      .main-login {
+          flex-direction: column;
+      }
+  }
+
+  @media only screen and (max-width: 600px) {
+      .main-login {
+          flex-direction: column;
+      }
+
+      .left-login>h1 {
+          display: none;
+      }
+
+      .left-login {
+          width: 100%;
+          height: auto;
+      }
+
+      .rigth-login {
+          width: 100%;
+          height: auto;
+      }
+
+      .image-left {
+          width: 50vw;
+      }
+
+      .card-login {
+          width: 90%;
+      }
+  }

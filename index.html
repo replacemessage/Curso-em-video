@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
     <title>Curso em vídeo</title>
 </head>
 <body>
+    <script src="funcoes.js"></script>
+     <!--<div class="menu">
+        <h1>menu</h1> 
+        <p>Abrir arquivo</p>
+    </div>-->
     
-    <!--Essa div é a global-->
+    <!--Essa div é a global-->  
     <div class="main-login">
-
 <!------------------------Div lado esquerdo dentro da global--------------->
         <div class="left-login">           
             <p>&copy Curso em Video.com</p>
-            <img src="payment-information-animate.svg" class="image-left"> 
-            <div class="nav-button">
-                <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
-                <button class="btn" id="registerBtn" onclick="register()"> Sign Up</button>
-            </div>
+            <img src="payment-information-animate.svg" class="image-left">            
         </div>
 
 <!------------------------Divi dos input do lado direito------------------->
@@ -29,47 +30,77 @@
               duas div's uma para fazer o login e a segunda 
               para fazer o cadastro sem a necessidade de criar uma
               nova pagina html-->   
-            <div class="card-login">
+            <div class="card-login" id="k-login">
                 <h1>Login</h1>
+                <div class="top">
+                    <span>Ainda não tem conta? <a href="#"onclick="register()">Criar conta</a></span>
+                </div>
             <!-------Input Usuário-->
-                <div class="textfield">
+                <div class="input-box">
                     <!--Acessando o site do Boxicons para verificar as configurações
                         das animações estilos formas dos icones-->
-                    <i class='bx bxs-user-account bx-flashing bx-sm'></i>
-                    <input type="text" name="usuario" placeholder="Usuário">
+                    <input type="text" class="input-field" placeholder="Usuário ou E-mail">
+                    <i class='bx bxs-user-account bx-sm'></i>
                 </div>
             <!-------Input senha-->
-                <div class="textfield">
+                <div class="input-box">
                     <!--<label for="senha">Senha</label>-->
-                    <i class="bx bxs-lock-open bx-sm bx-flashing" ></i>
-                    <input type="password" name="senha" placeholder="Senha">
+                    <input type="password" class="input-field" placeholder="Senha">
+                    <i class="bx bxs-lock-open bx-sm"></i>
                 </div>
-           
+            <!-------Botões ------>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Login">
+                </div>
                 
             </div>
-        <!-- Essa é a segunda div's para efetuar o cadastro-->    
-            <div class="card-cadastro">
-                <div class="textfield">
-                    <i class="bx bxs-lock-open bx-sm bx-flashing"></i>
-                    <input type="text" name="newuser" placeholder="Digite seu nome">
+    <!-- Essa é a segunda div's para efetuar o cadastro-->
+            <div class="card-cadastro" id="k-cadastro">
+                <h1>Cadastro</h1>
+                <div class="input-box">                  
+                    <input type="text" class="input-field"         placeholder="Digite seu nome">
+                    <i class="bx bxs-lock-open bx-flashing"></i>
                 </div>
-                <div class="textfield">
-                    <i class="bx bxs-lock-open bx-sm bx-flashing"></i>
-                    <input type="text" name="e-mail" placeholder="Digite o E-Mail">
+                <div class="input-box">                    
+                    <input type="text" class="input-field" placeholder="Digite o E-Mail">
+                    <i class="bx bxs-lock-open bx-flashing "></i>
                 </div>
-                <div class="textfield">
-                    <i class="bx bxs-lock-open bx-sm bx-flashing"></i>
-                    <input type="password" name="novasenha" placeholder="Crie uma senha">
+                <div class="input-box">                   
+                    <input type="password" class="input-field" placeholder="Crie uma senha">
+                    <i class="bx bxs-lock-open  bx-flashing"></i>
                 </div>
-            </div>
-<!-------Botões ------>
-<div class="button">
-    <button class="btn-login">Login</button>
-    <button class="btn-cadastro">Cadastro</button>
-</div>
-
-        </div>
+                <div class="iinput-box">
+                    <input type="submit" class="submit" value="Cadastrar"onclick="cadastrar()">
+                </div>
+                <div class="down">
+                    <span>Fazer login. <a href="#" onclick="login()">Logar-se</a></span>
+                </div>
+        </div>   
     </div>
-<script src="funcoes.js"></script>
+    <script>
+        
+            /*Pega a identificação dos botões*/
+            var a = document.getElementById("loginBtn");
+            var b = document.getElementById("registerBtn");
+            /*Pega a identificação das div's "card-"*/
+            var x = document.getElementById("k-login");
+            var y = document.getElementById("k-cadastro");
+        function login() {
+            /*window.alert("Rafael")*/
+            x.style.left = "20px";        
+            y.style.right = "-520px";
+
+            a.className += "white-btn";
+            b.className = "btn";
+        }
+        function register() {   
+            x.style.left = "-520px"; 
+            y.style.right = "20px";
+
+            a.className += "btn";
+            b.className = "white-btn";
+        }
+
+    </script>
 </body>
 </html>
