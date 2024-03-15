@@ -149,7 +149,7 @@
 
   .card-login {
       position: absolute;
-      left: 40px;     /*Esquerda*/
+      left: 55px;     /*Esquerda*/
       right: -500px; /*Direita*/
       width: 450px;  /*Largura*/
       height: 450px; /*Altura*/
@@ -162,14 +162,13 @@
   }
 
   .card-cadastro {
-      position: absolute;     
-      right: -520px; /*Direita*/ 
+      position: absolute;   
+      right: -500px; /*Direita*/ 
       width: 450px;  /*Largura*/
       height: 450px; /*Altura*/
       display: flex;
       flex-direction: column;
       transition: .8s ease-in-out;
-      margin: 0px;
       padding: 30px;
       border-radius: 20px;
       box-shadow: 5px 5px 10px white;
@@ -180,7 +179,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0;
       color: red;
       font-weight: normal;
       font-style: normal;
@@ -214,6 +212,14 @@
       left: 17px;
       color: #fff;
   }
+  .input-box i#olho{
+    position: relative;
+    top: -36px;
+    left: 320px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
 
   .submit {
       font-size: 15px;
