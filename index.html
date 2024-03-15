@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="menu.css">
+    
     <title>Curso em vídeo</title>
 </head>
 <body>
-    <script src="funcoes.js"></script>
+ 
      <!--<div class="menu">
         <h1>menu</h1> 
         <p>Abrir arquivo</p>
@@ -30,7 +32,7 @@
               duas div's uma para fazer o login e a segunda 
               para fazer o cadastro sem a necessidade de criar uma
               nova pagina html-->   
-            <div class="card-login" id="k-login">
+            <form class="card-login" id="k-login" action="login.php" method="get">
                 <h1>Login</h1>
                 <div class="top">
                     <span>Ainda não tem conta? <a href="#"onclick="register()">Criar conta</a></span>
@@ -39,13 +41,13 @@
                 <div class="input-box">
                     <!--Acessando o site do Boxicons para verificar as configurações
                         das animações estilos formas dos icones-->
-                    <input type="text" class="input-field" placeholder="Usuário ou E-mail">
+                    <input type="text" class="input-field" placeholder="Usuário ou E-mail" required>
                     <i class='bx bxs-user-account bx-sm'></i>
                 </div>
             <!-------Input senha-->
                 <div class="input-box">
                     <!--<label for="senha">Senha</label>-->
-                    <input type="password" class="input-field" placeholder="Senha">
+                    <input type="password" class="input-field" placeholder="Senha" required>
                     <i class="bx bxs-lock-open bx-sm"></i>
                 </div>
             <!-------Botões ------>
@@ -53,54 +55,31 @@
                     <input type="submit" class="submit" value="Login">
                 </div>
                 
-            </div>
+            </form>
     <!-- Essa é a segunda div's para efetuar o cadastro-->
-            <div class="card-cadastro" id="k-cadastro">
+            <form class="card-cadastro" id="k-cadastro" action="cadastro.php" method="post">
                 <h1>Cadastro</h1>
                 <div class="input-box">                  
-                    <input type="text" class="input-field"         placeholder="Digite seu nome">
+                    <input type="text" name="nome" class="input-field"placeholder="Digite seu nome" required>
                     <i class="bx bxs-lock-open bx-flashing"></i>
                 </div>
                 <div class="input-box">                    
-                    <input type="text" class="input-field" placeholder="Digite o E-Mail">
+                    <input type="text" name="email" class="input-field" placeholder="Digite o E-Mail" required>
                     <i class="bx bxs-lock-open bx-flashing "></i>
                 </div>
                 <div class="input-box">                   
-                    <input type="password" class="input-field" placeholder="Crie uma senha">
+                    <input type="password" name="newpws" class="input-field" placeholder="Crie uma senha" required>
                     <i class="bx bxs-lock-open  bx-flashing"></i>
                 </div>
                 <div class="iinput-box">
-                    <input type="submit" class="submit" value="Cadastrar"onclick="cadastrar()">
+                    <input type="submit" name="confirmpws" class="submit" value="Cadastrar"onclick="register()">
                 </div>
                 <div class="down">
                     <span>Fazer login. <a href="#" onclick="login()">Logar-se</a></span>
                 </div>
-        </div>   
+            </form>   
     </div>
-    <script>
-        
-            /*Pega a identificação dos botões*/
-            var a = document.getElementById("loginBtn");
-            var b = document.getElementById("registerBtn");
-            /*Pega a identificação das div's "card-"*/
-            var x = document.getElementById("k-login");
-            var y = document.getElementById("k-cadastro");
-        function login() {
-            /*window.alert("Rafael")*/
-            x.style.left = "20px";        
-            y.style.right = "-520px";
-
-            a.className += "white-btn";
-            b.className = "btn";
-        }
-        function register() {   
-            x.style.left = "-520px"; 
-            y.style.right = "20px";
-
-            a.className += "btn";
-            b.className = "white-btn";
-        }
-
-    </script>
+  
+    <script type="text/javascript" src="funcoes.js"></script>
 </body>
 </html>
